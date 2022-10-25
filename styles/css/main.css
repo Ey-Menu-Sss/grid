@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: white;
+  font-family: sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 50px 250px 100px 100px 110px;
+  grid-template-areas: "bir ikki ikki ikki ikki" "uch uch uch uch uch" "tor tor besh olti olti" "tor tor besh olti2 olti2" "yetti yetti yetti yetti yetti";
+}
+.container .item1, .container .item8, .container .item7, .container .item6, .container .item5, .container .item4, .container .item3, .container .item2 {
+  background-color: rgb(12, 17, 38);
+  grid-area: bir;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: white;
+}
+.container .item2 {
+  background-color: rgb(222, 66, 66);
+  grid-area: ikki;
+}
+.container .item3 {
+  background-color: rgb(0, 102, 255);
+  grid-area: uch;
+}
+.container .item4 {
+  background-color: rgb(23, 19, 98);
+  grid-area: tor;
+}
+.container .item5 {
+  background-color: white;
+  grid-area: besh;
+}
+.container .item6 {
+  padding: 10px 30px;
+  background-color: rgb(131, 195, 225);
+  grid-area: olti;
+}
+.container .item7 {
+  background-color: rgb(69, 153, 108);
+  grid-area: olti2;
+  padding: 10px 30px;
+}
+.container .item8 {
+  background-color: rgba(240, 237, 57, 0.812);
+  grid-area: yetti;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    grid-template-areas: "bir bir bir bir" "uch uch uch uch" "ikki tor tor tor" "ikki tor tor tor" "ikki yetti yetti yetti" "ikki olti olti olti2";
+  }
+}
+@media (max-width: 780px) {
+  .container {
+    grid-template-areas: "bir bir bir bir" "ikki ikki ikki ikki" "uch uch uch uch" "tor tor tor tor" "yetti yetti yetti yetti" "olti2 olti2 olti2 olti2" "olti olti olti olti";
+  }
+}/*# sourceMappingURL=main.css.map */
